@@ -1,7 +1,7 @@
 <!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <title></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"> <link href="http://fonts.googleapis.com/css?family=Kotta+One|Niconne|Economica:400,700" rel="stylesheet" type="text/css"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.css"> <link rel="stylesheet" href="styles/main.css">  </head><body ng-app="samsungEnterpriseApp"> <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
   your browser</a> to improve your experience.</p>
-<![endif]--> <!-- Add your site or application content here --> <div class="container" ui-view=""></div> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>!function (A, n, g, u, l, a, r) {
+<![endif]--> <!-- Add your site or application content here --> <div class="container" fast-click="" ui-view=""></div> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>!function (A, n, g, u, l, a, r) {
     A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
       (A[l].q = A[l].q || []).push(arguments)
     }, A[l].l = +new Date, a = n.createElement(g),
@@ -9,7 +9,7 @@
   }(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
   ga('create', 'UA-XXXXX-X');
-  ga('send', 'pageview');</script> <script src="scripts/vendor.js"></script> <script src="scripts/scripts.js"></script>  
+  ga('send', 'pageview');</script> <script src="scripts/vendor.js"></script> <script src="scripts/scripts.js"></script> <script src="cordova.js"></script>  
 
 <!-- Begin Templates -->
 <script type="text/ng-template" id="/views/calendar/events.html">
@@ -29,19 +29,23 @@
 </script>
 
 <script type="text/ng-template" id="/views/default/app-structure.html">
-<div class="app-page"> <div ui-view="Header" class="header"></div> <div ui-view="Content" class="content"></div> </div>
+<div class="app-page"> <div class="header" ui-view="Header"></div> <div class="content" ui-view="Content"></div> <slide-out-menu top="" height="auto" class="slide-out-menu"> <div stop-event="" ui-view="SlideOutMenu"></div> </slide-out-menu> </div>
 </script>
 
 <script type="text/ng-template" id="/views/default/header.html">
-<div class="header-content"> <span ng-click="back()"> <i class="fa fa-chevron-left"></i> back </span> </div>
+<div class="header-content"> <span ng-click="back()"> <i class="fa fa-chevron-left"></i> Back </span> </div>
 </script>
 
 <script type="text/ng-template" id="/views/directives/contact-item.html">
 <div class="grid-view-item contact-item"> {{contact.name}} {{contact.title}} </div>
 </script>
 
+<script type="text/ng-template" id="/views/password/add-password.html">
+<div class="add-password"> <div class="nice-padding"> <label class="block mb10"> <span class="add-password-label">Enter a Password Title</span> <input type="text" ng-model="password.title" placeholder="Password Title" class="input-default block"> </label> <label class="block mb10"> <span class="add-password-label">Enter Password</span> <input type="password" ng-model="password.password" placeholder="password" class="input-default block"> </label> <label class="block mb10"> <span class="add-password-label">Retype Password</span> <input type="password" ng-model="password.rePassword" placeholder="Retype password" class="input-default block"> </label> <div class="button-default" ng-click="add() && slideOutMenuParams.close()"> Save Password </div> </div> </div>
+</script>
+
 <script type="text/ng-template" id="/views/password/entries.html">
-<div class="password-entries"> <div class="locker" ui-keypress="{'enter': 'check($event)'}" ng-show="!displayPassword"> <label> Enter your master password </label> <input type="password" class="input-default block master-password-input" placeholder="Enter the Master password" ng-model="masterPassword"> <div class="button-default master-password-button" ng-click="check()"> View Passwords </div> </div> <div class="add-password" ng-if="displayPassword"> <div class="button-default add-password-button" ng-click="add()"> Add a password </div> </div> <div class="password-list" ng-if="displayPassword"> <ul> <li class="password-item" ng-repeat="password in passwordList" ng-init="noMask = true; readonly = true"> <div class="password-header">{{password.type}} Password:</div> <input ng-readonly="readonly" class="input-default password-display block" type="text" value="{{password.password | maskPassword:noMask}}"> <span class="link password-link" ng-show="noMask && readonly" ng-click="noMask = false; readonly = true">show</span> <span class="link password-link" ng-show="!noMask && readonly" ng-click="noMask = true; readonly = true">hide</span> <span class="link password-link" ng-show="!noMask && readonly" ng-click="readonly = false">update</span> <span class="link password-link" ng-show="!readonly" ng-click="savePassword(password.id, password.password) && (readonly = true)">save</span> <span class="link password-link" ng-show="!readonly" ng-click="readonly = true">cancel</span> </li> </ul> </div> </div>
+<div class="password-entries" ng-tell="Password Block"> <div class="locker" ui-keypress="{'enter': 'check($event)'}" ng-show="!displayPassword"> <label> Enter your master password </label> <input type="password" class="input-default block master-password-input" placeholder="Enter the Master password" ng-model="masterPassword"> <div class="button-default master-password-button" ng-click="check()"> View Passwords </div> </div> <div class="add-password-section" ng-if="displayPassword"> <div class="button-default add-password-button" ng-click="slideOutMenuParams.open()"> Add a password </div> </div> <div class="password-list" ng-if="displayPassword"> <ul> <li class="password-item" ng-repeat="password in passwordList track by password.id" ng-init="noMask = true; readonly = true"> <div class="password-header">{{password.title}} Password:</div> <input ng-readonly="readonly" class="input-default password-display block" type="text" value="{{password.password | maskPassword:noMask}}"> <span class="link password-link" ng-show="noMask && readonly" ng-click="noMask = false; readonly = true">show</span> <span class="link password-link" ng-show="!noMask && readonly" ng-click="noMask = true; readonly = true">hide</span> <span class="link password-link" ng-show="!noMask && readonly" ng-click="readonly = false">update</span> <span class="link password-link" ng-show="!readonly" ng-click="savePassword(password.id, password.password) && (readonly = true)">save</span> <span class="link password-link" ng-show="!readonly" ng-click="readonly = true">cancel</span> </li> </ul> </div> </div>
 </script>
 
 <script type="text/ng-template" id="/views/start/login.html">
