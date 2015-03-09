@@ -13,19 +13,19 @@
 
 <!-- Begin Templates -->
 <script type="text/ng-template" id="/views/calendar/events.html">
-<p>This is the calendar/events view.</p>
+<div class="calendar-events"> <ul> <li ng-repeat="event in events"> {{events}} </li> </ul> </div>
 </script>
 
 <script type="text/ng-template" id="/views/calendar/home.html">
-<div class="calendar-home"> <div class="button-default" ng-click="$state.go('calendar.events')"> Calendar Events </div> <div class="button-default" ng-click="$state.go('calendar.timezone')"> Headquarters Timezone </div> </div>
+<div class="calendar-home"> <ul class="grid-view"> <li class="grid-view-list calendar-animation" ng-repeat="option in options"> <div class="grid-view-item calendar-button" ng-click="$state.go('{{option.state}}')"> <i class="fa fa-{{option.icon}} fa-2x"></i> <div class="span"> {{option.label}} </div> </div> </li> </ul> </div>
 </script>
 
 <script type="text/ng-template" id="/views/calendar/timezone.html">
-<p>This is the calendar/timezone view.</p>
+<div class="calendar-events"> <ul> <li ng-repeat="timezone in timezones"> {{events}} </li> </ul> </div>
 </script>
 
 <script type="text/ng-template" id="/views/contact/entries.html">
-<div class="contact-entries"> <ul class="grid-view"> <li class="grid-view-list" ng-repeat="contact in contacts"> <contact-item contact="contact"></contact-item> </li> </ul> </div>
+<div class="contact-entries"> <ul class="grid-view"> <li class="grid-view-list contact-animation" ng-repeat="contact in contacts"> <contact-item contact="contact"></contact-item> </li> </ul> </div>
 </script>
 
 <script type="text/ng-template" id="/views/default/app-structure.html">
