@@ -1,1 +1,1 @@
-<div class="calendar-events"> <ul> <li ng-repeat="timezone in timezones"> {{timezone}} </li> </ul> </div>
+<div class="calendar-timezone"> <ul> <li class="timezone-block timezone-image timezone-animation" ng-repeat="timezone in timezones" style="background-image: url('{{timezone.image}}')" ng-init="timeData = (timezone.diff | timezoneFilter)"> <div class="time-data"> {{timeData.time}} </div> <div class="date-data"> {{timeData.date}} </div> </li> </ul> </div>

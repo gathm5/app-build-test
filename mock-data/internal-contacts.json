@@ -1,47 +1,52 @@
 {
   "contacts": [
     {
+      "id": 1,
       "name": "Richard Balsewich",
       "title": "Director",
       "phone": "1234567890",
       "nickname": "rich",
-      "Team": "SEA-Customer Ops & Support",
+      "team": "SEA-Customer Ops & Support",
       "email": "r.balsewich@samsung.com",
       "address": "Home Office California, USA"
     },
     {
+      "id": 2,
       "name": "Gregg Ostrowski",
       "title": "Vice President",
       "phone": "1234567890",
       "nickname": "gregg",
-      "Team": "SEA-Customer Ops & Support",
+      "team": "SEA-Customer Ops & Support",
       "email": "g.ostrowski@samsung.com",
       "address": "85 Challenger road, New Jersey, USA"
     },
     {
+      "id": 3,
       "name": "Matt Lewandowsky",
       "title": "Enterprise Developer",
       "phone": "1234567890",
       "nickname": "matt",
-      "Team": "SEA-Customer Ops & Support",
+      "team": "SEA-Customer Ops & Support",
       "email": "m.lewandowsky@samsung.com",
       "address": "Home Office California, USA"
     },
     {
+      "id": 4,
       "name": "Rafael Amsili",
       "title": "Enterprise Developer",
       "phone": "1234567890",
       "nickname": "rafi",
-      "Team": "SEA-Customer Ops & Support",
+      "team": "SEA-Customer Ops & Support",
       "email": "r.amsili@samsung.com",
       "address": "Home Office California, USA"
     },
     {
+      "id": 5,
       "name": "Cesar Sanchez",
       "title": "Graphic Designer",
       "phone": "1234567890",
       "nickname": "cesar",
-      "Team": "SEA-Customer Ops & Support",
+      "team": "SEA-Customer Ops & Support",
       "email": "cd.sanchez@samsung.com",
       "address": "Home Office California, USA"
     }

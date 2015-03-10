@@ -1,10 +1,22 @@
 {
   "events": [
     {
-      "name": "Event 1"
+      "name": "Call with American Airlines",
+      "details": "",
+      "when": "",
+      "till": "",
+      "location": "",
+      "zone": "",
+      "diff": -6
     },
     {
-      "name": "Event 2"
+      "name": "New hire Orientation Program",
+      "details": "",
+      "when": "",
+      "till": "",
+      "location": "",
+      "zone": "",
+      "diff": -6
     }
   ]
 }

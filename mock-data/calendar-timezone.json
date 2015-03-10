@@ -1,10 +1,25 @@
 {
   "timezone": [
     {
-      "zone": "Pacific"
+      "place": "San Francisco, CA",
+      "state": "ca",
+      "zone": "Pacific",
+      "image": "./images/timezone/ca.png",
+      "diff": -7
     },
     {
-      "zone": "Eastern"
+      "place": "Ridgefield Park, NJ",
+      "state": "nj",
+      "zone": "Eastern",
+      "image": "./images/timezone/nj.png",
+      "diff": -4
+    },
+    {
+      "place": "Richmond, TX",
+      "state": "tx",
+      "zone": "central",
+      "image": "./images/timezone/tx.png",
+      "diff": -5
     }
   ]
 }
