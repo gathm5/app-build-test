@@ -1,1 +1,1 @@
-<div class="expense-home"> expense home </div>
+<div class="expense-home"> <ul class="grid-view"> <li class="grid-view-list expense-animation" ng-repeat="option in options"> <div class="grid-view-item expense-button" ng-click="$state.go('{{option.state}}')"> <i class="fa fa-{{option.icon}} fa-2x"></i> <div class="span"> {{option.label}} </div> </div> </li> </ul> </div>

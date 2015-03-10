@@ -2,20 +2,20 @@
   "events": [
     {
       "name": "Call with American Airlines",
-      "details": "",
-      "when": "",
+      "details": "Call with AA regarding the MZR scanner app",
+      "when": 1425973069435,
       "till": "",
-      "location": "",
-      "zone": "",
+      "location": "Home Office",
+      "zone": "Pacific",
       "diff": -6
     },
     {
       "name": "New hire Orientation Program",
-      "details": "",
-      "when": "",
+      "details": "Mandatory new hire orientation program for all new employees",
+      "when": 1425973069435,
       "till": "",
-      "location": "",
-      "zone": "",
+      "location": "Ridgefield Park, NJ",
+      "zone": "Eastern",
       "diff": -6
     }
   ]

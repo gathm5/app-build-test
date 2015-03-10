@@ -13,7 +13,7 @@
 
 <!-- Begin Templates -->
 <script type="text/ng-template" id="/views/calendar/events.html">
-<div class="calendar-events"> <ul> <li ng-repeat="event in events"> {{events}} </li> </ul> </div>
+<div class="calendar-events"> <ul> <li ng-repeat="event in events"> <div class="event-name"> {{event.name}}</div> <div class="event-name"> {{event.when | amDateFormat:'MMM DD, hh:mm A'}}</div> <div class="event-name"> {{event.location}}</div> </li> </ul> </div>
 </script>
 
 <script type="text/ng-template" id="/views/calendar/home.html">
@@ -45,7 +45,7 @@
 </script>
 
 <script type="text/ng-template" id="/views/expense/expense-home.html">
-<div class="expense-home"> expense home </div>
+<div class="expense-home"> <ul class="grid-view"> <li class="grid-view-list expense-animation" ng-repeat="option in options"> <div class="grid-view-item expense-button" ng-click="$state.go('{{option.state}}')"> <i class="fa fa-{{option.icon}} fa-2x"></i> <div class="span"> {{option.label}} </div> </div> </li> </ul> </div>
 </script>
 
 <script type="text/ng-template" id="/views/password/add-password.html">
@@ -61,7 +61,7 @@
 </script>
 
 <script type="text/ng-template" id="/views/start/menu-screen.html">
-<div class="menu-screen"> <div class="round-menu" ng-class="{'loaded': loaded, 'selected': selected}"> <div class="menu first" ng-click="select('expense.basic')"> <span class="text-span">Expenses <br><i class="fa fa-money"></i></span> </div> <div class="menu second" ng-click="select('contact.entries')"> <span class="text-span">Contacts <br><i class="fa fa-phone"></i></span> </div> <div class="menu third" ng-click="select('calendar.basic')"> <span class="text-span"><i class="fa fa-calendar"></i><br>Calendar</span> </div> <div class="menu fourth" ng-click="select('password.entries')"> <span class="text-span"><i class="fa fa-user-secret"></i><br>Password</span> </div> </div> </div>
+<div class="menu-screen zig-zag"> <div class="round-menu" ng-class="{'loaded': loaded, 'selected': selected}"> <div class="menu first" ng-click="select('expense.basic')"> <span class="text-span">Expenses <br><i class="fa fa-money"></i></span> </div> <div class="menu second" ng-click="select('contact.entries')"> <span class="text-span">Contacts <br><i class="fa fa-phone"></i></span> </div> <div class="menu third" ng-click="select('calendar.basic')"> <span class="text-span"><i class="fa fa-calendar"></i><br>Calendar</span> </div> <div class="menu fourth" ng-click="select('password.entries')"> <span class="text-span"><i class="fa fa-user-secret"></i><br>Password</span> </div> </div> </div>
 </script>
 <!-- End Templates -->
 

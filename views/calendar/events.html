@@ -1,1 +1,1 @@
-<div class="calendar-events"> <ul> <li ng-repeat="event in events"> {{events}} </li> </ul> </div>
+<div class="calendar-events"> <ul> <li ng-repeat="event in events"> <div class="event-name"> {{event.name}}</div> <div class="event-name"> {{event.when | amDateFormat:'MMM DD, hh:mm A'}}</div> <div class="event-name"> {{event.location}}</div> </li> </ul> </div>
