@@ -45,7 +45,7 @@
 </script>
 
 <script type="text/ng-template" id="/views/expense/add-expense.html">
-<div class="add-expense"> <p>This is the expense/add-expense view.</p> </div>
+<div class="add-expense"> <div class="image-holder"> <div class="empty-image" ng-if="!billImage" ng-click="capture()"> <div class="no-image-text"> Take Snapshot of the Receipt </div> <span> <i class="fa fa-camera fa-2x"></i> </span> </div> <img class="bill-image" ng-if="billImage" ng-src="billImage"> </div> </div>
 </script>
 
 <script type="text/ng-template" id="/views/expense/expense-home.html">
