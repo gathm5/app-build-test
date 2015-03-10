@@ -4,19 +4,41 @@
       "name": "Call with American Airlines",
       "details": "Call with AA regarding the MZR scanner app",
       "when": 1425973069435,
-      "till": "",
+      "till": null,
       "location": "Home Office",
       "zone": "Pacific",
-      "diff": -6
+      "diff": -6,
+      "attend": false
     },
     {
       "name": "New hire Orientation Program",
       "details": "Mandatory new hire orientation program for all new employees",
       "when": 1425973069435,
-      "till": "",
+      "till": null,
       "location": "Ridgefield Park, NJ",
       "zone": "Eastern",
-      "diff": -6
+      "diff": -6,
+      "attend": false
+    },
+    {
+      "name": "Discovery Days I",
+      "details": "Learn about Samsung organization",
+      "when": 1424710800000,
+      "till": 1424739600000,
+      "location": "Ridgefield Park, NJ",
+      "zone": "Eastern",
+      "diff": -6,
+      "attend": false
+    },
+    {
+      "name": "Discovery Days II",
+      "details": "Learn about Samsung organization",
+      "when": 1424797200000,
+      "till": 1424826000000,
+      "location": "Ridgefield Park, NJ",
+      "zone": "Eastern",
+      "diff": -6,
+      "attend": false
     }
   ]
 }

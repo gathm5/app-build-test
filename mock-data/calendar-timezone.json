@@ -15,11 +15,18 @@
       "diff": -4
     },
     {
-      "place": "Richmond, TX",
+      "place": "Dallas, TX",
       "state": "tx",
       "zone": "central",
       "image": "./images/timezone/tx.png",
       "diff": -5
+    },
+    {
+      "place": "Seoul, Korea",
+      "state": "seoul",
+      "zone": "korean",
+      "image": "./images/timezone/seoul-korea.png",
+      "diff": 9
     }
   ]
 }
