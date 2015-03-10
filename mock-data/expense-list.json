@@ -1,0 +1,28 @@
+{
+  "expenses": [
+    {
+      "amount": "$23.0",
+      "value": 23,
+      "currency": "$",
+      "type": "food",
+      "notes": "Dinner at Don Pepe's",
+      "date": 1424739600000
+    },
+    {
+      "amount": "$60.0",
+      "value": 60,
+      "currency": "$",
+      "type": "Taxi",
+      "notes": "Taxi from airport to the hotel room",
+      "date": 1424710800000
+    },
+    {
+      "amount": "$479.0",
+      "value": 479,
+      "currency": "$",
+      "type": "Lodging",
+      "notes": "Hotel stay at Hilton Garden",
+      "date": 1424710800000
+    }
+  ]
+}

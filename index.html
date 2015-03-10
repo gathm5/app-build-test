@@ -44,8 +44,12 @@
 <div class="grid-view-item contact-item"> <div class="view-details"> view </div> <div class="contact-name layer-1"> {{contact.name}} </div> <div class="contact-title layer-2"> {{contact.title}} </div> <div class="contact-phone layer-3"> <i class="fa fa-phone"></i> {{contact.phone}} </div> <div class="contact-email layer-4"> <i class="fa fa-envelope"></i> {{contact.email}} </div> </div>
 </script>
 
+<script type="text/ng-template" id="/views/directives/expense-item.html">
+<div class="grid-view-item expense-item"> <div class="view-details"> view </div> <div class="expense-name layer-1"> {{expense.amount}} </div> <div class="expense-title layer-2"> Category: {{expense.type}} </div> <div class="expense-phone layer-3"> On {{expense.date | amDateFormat:'MMM DD, hh:mm A'}} </div> <div class="expense-email layer-4"> {{expense.notes}} </div> </div>
+</script>
+
 <script type="text/ng-template" id="/views/expense/add-expense.html">
-<div class="add-expense"> <div class="image-holder"> <div class="empty-image" ng-if="!billImage" ng-click="capture()"> <div class="no-image-text"> Take Snapshot of the Receipt </div> <span> <i class="fa fa-camera fa-2x"></i> </span> </div> <img class="bill-image" ng-if="billImage" ng-src="billImage"> </div> </div>
+<div class="add-expense"> <div class="image-holder"> <div class="empty-image" ng-if="!billImage" ng-click="capture()"> <div class="no-image-text"> Take Snapshot of the Receipt </div> <span> <i class="fa fa-camera fa-2x"></i> </span> </div> <img class="bill-image" ng-if="billImage" ng-src="{{billImage}}"> </div> </div>
 </script>
 
 <script type="text/ng-template" id="/views/expense/expense-home.html">
@@ -53,7 +57,7 @@
 </script>
 
 <script type="text/ng-template" id="/views/expense/view-expense.html">
-<div class="view-expense"> <p>This is the expense/view-expense view.</p> </div>
+<div class="view-expense"> <input type="text" class="input-default block" placeholder="Search" ng-model="expenseFilter"> <ul class="grid-view"> <li class="grid-view-list expense-animation" ng-repeat="expense in allExpenses = (expenses | filter:expenseFilter)" ng-click="true"> <expense-item expense="expense"></expense-item> </li> </ul> <div class="message" ng-if="!allExpenses || !allExpenses.length"> No expenses found </div> </div>
 </script>
 
 <script type="text/ng-template" id="/views/password/add-password.html">
