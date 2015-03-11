@@ -73,7 +73,7 @@
 </script>
 
 <script type="text/ng-template" id="/views/start/login.html">
-<div class="login" ng-tell="App Holder" ui-keypress="{'enter':'login($event)'}"> <div class="logo start-up-logo"></div> <div class="nice-padding"> <input type="text" placeholder="Samsung Username" class="username input-default block" ng-model="credentials.username"> <input type="password" placeholder="Password" class="password input-default block" ng-model="credentials.password"> <div class="button-default login-submit" ng-click="blur(login)"> Login </div> <div class="message error" ng-if="error"> {{dictionary.login.error}} </div> <div class="next-big-thing"> <div class="line-1 line" ng-if="line.first">{{line.first}}</div> <div class="line-2 line" ng-if="line.second">{{line.second}}</div> </div> </div> </div>
+<div class="login" ng-tell="App Holder" ui-keypress="{'enter':'login($event)'}"> <div class="logo start-up-logo"></div> <div class="nice-padding"> <input type="text" placeholder="Samsung Username" class="username input-default block" ng-model="credentials.username"> <input type="password" placeholder="Password" class="password input-default block" ng-model="credentials.password"> <div class="button-default login-submit" ng-click="blur(login)"> Login </div> <div class="message error" ng-if="error"> {{dictionary.login.error}} </div> <div class="next-big-thing" ng-show="line"> <div class="line-1 line" ng-if="line.first">{{line.first}}</div> <div class="line-2 line" ng-if="line.second">{{line.second}}</div> </div> </div> </div>
 </script>
 
 <script type="text/ng-template" id="/views/start/menu-screen.html">
