@@ -52,7 +52,6 @@
   <gap:plugin name="org.apache.cordova.network-information"/>
   <gap:plugin name="org.apache.cordova.splashscreen"/>
   <gap:plugin name="org.apache.cordova.vibration"/>
-  <gap:plugin name="https://github.com/moderna/cordova-plugin-html2pdf.git"/>
   <!--<gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.8"/>-->
   <feature name="Geolocation">
     <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker"/>
