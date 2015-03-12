@@ -22,7 +22,7 @@
   <preference name="show-splash-screen-spinner" value="true"/>
   <preference name="auto-hide-splash-screen" value="true"/>
   <preference name="disable-cursor" value="false"/>
-  <preference name="android-minSdkVersion" value="15"/>
+  <preference name="android-minSdkVersion" value="9"/>
   <preference name="android-installLocation" value="auto"/>
   <preference name="DisallowOverscroll" value="true"/>
   <gap:plugin name="org.li8.inappbrowser" version="0.1"/>
@@ -52,7 +52,7 @@
   <gap:plugin name="org.apache.cordova.network-information"/>
   <gap:plugin name="org.apache.cordova.splashscreen"/>
   <gap:plugin name="org.apache.cordova.vibration"/>
-
+  <gap:plugin name="https://github.com/moderna/cordova-plugin-html2pdf.git"/>
   <!--<gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.8"/>-->
   <feature name="Geolocation">
     <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker"/>
@@ -60,6 +60,7 @@
   <feature name="Device">
     <param name="android-package" value="org.apache.cordova.device.Device"/>
   </feature>
+
   <icon src="icon.png"/>
   <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png"/>
   <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/icon-48-mdpi.png"/>
